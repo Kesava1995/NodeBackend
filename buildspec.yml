@@ -20,3 +20,7 @@ phases:
       - printf '[{"name":"'$CONTAINER_NAME'","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinition.json
 artifacts:
     files: imagedefinition.json
+env:
+  parameter-store:
+    DOCKERHUB_USER: /DOCKERHUB_USER
+    DOCKERHUB_PASS: /DOCKERHUB_PASS
